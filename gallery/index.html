@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="box">
+            <ul class="minbox">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ol class="maxbox">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+        body>
+    <div class="loading-wrapper">
+     <div class="loading-text"><hr>⚠️Đợi Một Xíu♻️<br>  Website Đang  Loading...<br> </div>
+     <div class="loading-bar-wrapper">
+      <div class="loading-bar"></div>
+     </div>
+    </div>
+   
+    <script>
+     window.addEventListener('load', function() {
+       var loading = document.querySelector('.loading-wrapper');
+       loading.style.display = 'none';
+     });
+    </script>
+    
+   <script>
+               function VietKhanhStart() {
+                   audio.play()
+               }
+               const VietKhanh_List = ["Nhạc/em.mp3"];
+               let index = Math.floor(Math.random() * VietKhanh_List.length);
+               const audio = new Audio(VietKhanh_List[index]);
+               function VietKhanhAudio() {
+                   audio.play()
+               }
+               document.addEventListener("click", VietKhanhAudio),
+               audio.addEventListener("ended", function() {
+                   index = (index + 1) % VietKhanh_List.length,
+                   audio.src = VietKhanh_List[index],
+                   audio.play()
+               })
+           </script> 
+    </body>
+</html>
